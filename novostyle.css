@@ -1,6 +1,69 @@
-header{
- background: #BBBBBB;
- padding: 20px;
+header {
+    background: #BBBBBB;
+    padding: 20px;
 }
+
+body{
+    position: relative;
+    width: 1080px;
+    margin: 0 ;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    padding-left: 110px;
+}
+
+nav a{
+    display: inline-block;
+    margin-left: 200px;
+    font-size: 150%;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+}
+
+nav a:hover{
+    font-size: 34px;
+    color: #CD853F;
+    text-decoration: underline;
+}
+
+.produtos li{
+    border: 3px solid black;
+    border-radius: 15px;
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    padding: 50px 0;
+    margin: 1%;
+}
+
+.produtos li:hover{
+ border-color: peru; 
+ }
+
+li:hover{
+ font-size: 110%;
+ }
+
+ .descricao{
+    font-size: 14px;
+ }
+
+ .preco{
+    font-size: 30px;
+    font-weight: bold;
+ }
+
+footer {
+    text-align: center;
+    background: url(https://github.com/dgouvvea/Img/blob/main/A/bg.jpg?raw=true);
+    padding: 20px;
+    color: white;
+}
+
 
 
