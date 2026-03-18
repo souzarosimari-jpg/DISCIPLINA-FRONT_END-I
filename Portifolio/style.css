@@ -1,0 +1,360 @@
+
+/* ----------------------------------
+    VARIÁVEIS DE CORES
+----------------------------------
+*/
+:root {
+    --cor-principal: #6c5ce7; /* Roxo vibrante */
+    --cor-secundaria: #a29bfe; /* Roxo Claro / Destaque */
+    --cor-texto: #333;
+    --cor-fundo-claro: #f5f6fa;
+    --cor-branco: #ffffff;
+    --cor-sombra: rgba(0,0,0,0.1);
+}
+
+/* ----------------------------------
+    RESET E ESTILOS GERAIS
+----------------------------------
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-branco);
+}
+
+.secao {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.secao h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: var(--cor-principal);
+}
+
+.fundo-claro {
+    background-color: var(--cor-fundo-claro);
+}
+
+/* ----------------------------------
+    BOTÕES
+----------------------------------
+*/
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.principal {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+}
+
+.btn.principal:hover {
+    background-color: var(--cor-secundaria);
+    transform: translateY(-2px);
+}
+
+.btn.secundario {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+}
+
+.btn.secundario:hover {
+    background-color: var(--cor-principal);
+    color: var(--cor-branco);
+}
+
+
+/* ----------------------------------
+    1. CABEÇALHO E NAVEGAÇÃO
+----------------------------------
+*/
+.cabecalho {
+    background-color: var(--cor-branco);
+    box-shadow: 0 2px 5px var(--cor-sombra);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--cor-principal);
+    font-size: 1.8em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 30px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: var(--cor-principal);
+}
+
+/* Menu Mobile Toggle */
+.menu-toggle {
+    display: none; /* Oculto em desktop */
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--cor-principal);
+}
+
+
+/* ----------------------------------
+    2. SEÇÃO HERO
+----------------------------------
+*/
+.hero {
+    /* Mude esta URL para sua imagem de fundo */
+    background: linear-gradient(rgba(108,92,231,0.7), rgba(162,155,254,0.7)), url('https://via.placeholder.com/1920x600?text=Fundo+Organizado+e+Elegante') no-repeat center center/cover;
+    color: var(--cor-branco);
+    padding: 120px 20px;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-conteudo {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* ----------------------------------
+    3. SEÇÃO SERVIÇOS
+----------------------------------
+*/
+.servicos-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.servico-card {
+    background-color: var(--cor-branco);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--cor-sombra);
+    width: 350px;
+    transition: transform 0.3s;
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.servico-card img {
+    margin-bottom: 15px;
+}
+
+.servico-card h3 {
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* ----------------------------------
+    4. SEÇÃO PORTFÓLIO (Galeria)
+----------------------------------
+*/
+.galeria-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.galeria-item {
+    width: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px var(--cor-sombra);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.galeria-item img:hover {
+    transform: scale(1.05);
+}
+
+.galeria-item p {
+    padding: 15px;
+    background-color: var(--cor-branco);
+    font-weight: 600;
+    color: var(--cor-principal);
+}
+
+
+/* ----------------------------------
+    5. SEÇÃO CONTATO (Formulário)
+----------------------------------
+*/
+.contato-form {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+}
+
+.form-contato {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-contato input[type="text"],
+.form-contato input[type="email"],
+.form-contato textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.form-contato textarea {
+    resize: vertical;
+}
+
+/* ----------------------------------
+    6. RODAPÉ
+----------------------------------
+*/
+.rodape {
+    background-color: var(--cor-texto);
+    color: var(--cor-branco);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+}
+
+.rodape p {
+    margin: 5px 0;
+}
+
+.rodape a {
+    color: var(--cor-secundaria);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.rodape a:hover {
+    color: var(--cor-branco);
+}
+
+
+/* ----------------------------------
+    RESPONSIVIDADE (Telas Pequenas)
+----------------------------------
+*/
+@media (max-width: 850px) {
+    /* Ajuste de Fonte e Espaçamento */
+    .hero h1 { font-size: 2.2em; }
+    .hero p { font-size: 1.1em; }
+    .secao h2 { font-size: 2em; }
+
+    /* Navegação Mobile */
+    .menu-toggle {
+        display: block; /* Mostra o botão do menu */
+    }
+
+    .nav {
+        /* Esconde a navegação e a posiciona para o menu mobile */
+        position: absolute;
+        top: 65px; /* Altura do cabeçalho */
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-branco);
+        box-shadow: 0 5px 5px var(--cor-sombra);
+        display: none; /* Inicia Oculto */
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .nav.active {
+        display: block; /* Mostra quando a classe 'active' é adicionada pelo JS */
+    }
+
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav ul li {
+        margin: 0;
+        border-top: 1px solid var(--cor-fundo-claro);
+    }
+    
+    .nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        text-align: left;
+    }
+    
+    /* Layout de Cards e Galeria */
+    .servico-card, .galeria-item {
+        width: 100%; /* Ocupa a largura total em telas pequenas */
+        max-width: 400px;
+    }
+
+    .galeria-grid, .servicos-grid {
+        gap: 40px;
+    }
+}
