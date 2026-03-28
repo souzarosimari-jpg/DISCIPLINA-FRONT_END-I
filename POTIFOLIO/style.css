@@ -22,8 +22,6 @@ header img {
 h2 {
     color: #00BFFF;
     font-size: 1.5 rem;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 .habilidades {
@@ -55,6 +53,13 @@ h2 {
     padding: 20px 0;
 }
 
+.projetos h2 {
+    display: block;
+    color: #00BFFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .projetos-grid {
     display: flex;
     flex-wrap: wrap;
@@ -68,7 +73,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     gap: 8px;
-}projetos-grid
+}
 
 .projetos img {
     width: 230px;
@@ -76,4 +81,25 @@ h2 {
     object-fit: cover;
     border-radius: 8px;
     display: block;
+}
+
+#contatos {
+    background-color: white;
+    padding: 30px 0;
+    margin: 3%;
+    border-radius: 11%;
+
+}
+
+.contatos {
+    padding: 2rem 0 3rem 0;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.contatos a {
+    color: #333;
+    text-decoration: none;
 }
